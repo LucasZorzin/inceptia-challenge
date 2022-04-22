@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/inceptia-challenge/static/css/main.9f0f410c.css",
-    "main.js": "/inceptia-challenge/static/js/main.abbc956e.js",
+    "main.js": "/inceptia-challenge/static/js/main.b533cfbc.js",
     "static/js/787.c26e4e60.chunk.js": "/inceptia-challenge/static/js/787.c26e4e60.chunk.js",
     "static/media/ia.png": "/inceptia-challenge/static/media/ia.33c0c72320cb857ff571.png",
     "static/media/login.jpg": "/inceptia-challenge/static/media/login.7261fdf12b96c32ba2a9.jpg",
     "static/media/logo-inceptia.png": "/inceptia-challenge/static/media/logo-inceptia.9889e54aced5ef5011be.png",
     "index.html": "/inceptia-challenge/index.html",
     "main.9f0f410c.css.map": "/inceptia-challenge/static/css/main.9f0f410c.css.map",
-    "main.abbc956e.js.map": "/inceptia-challenge/static/js/main.abbc956e.js.map",
+    "main.b533cfbc.js.map": "/inceptia-challenge/static/js/main.b533cfbc.js.map",
     "787.c26e4e60.chunk.js.map": "/inceptia-challenge/static/js/787.c26e4e60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f0f410c.css",
-    "static/js/main.abbc956e.js"
+    "static/js/main.b533cfbc.js"
   ]
 }
