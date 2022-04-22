@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useState, createContext, useContext } from "react";
 const ApiContext = createContext([]);
 export const useApiContext = () => useContext(ApiContext);
 
@@ -6,64 +6,21 @@ const UseContextProvider = ({ children }) => {
     const [data, setData] = useState([]);
     const [dataClient, setDataClient] = useState([]);
     const [results, setResults] = useState([]);
+    const [login, setLogin] = useState([]);
+    const [validation, setValidation] = useState('');
 
-    useEffect(() => {
-        let dataKey = [];
-        // 1) POST: LOGIN (POR DEFECTO le doy valores predeterminados, así se accede al panel de reportes directamente)
-        const fetchData = async () => {
-            const datas = new FormData();
-            datas.append('email', 'reactdev@iniceptia.ai');
-            datas.append('password', '4eSBbHqiCTPdBCTj');
+    const currentDate = new Date();
+    const currentDay = JSON.stringify(currentDate.getDate());
+    const currentMonth = JSON.stringify(currentDate.getMonth() + 1);
+    const currentYear = JSON.stringify(currentDate.getFullYear());
+    const [date, setDate] = useState([currentYear, currentMonth, currentDay]);
+    const [fromDate, setFromDate] = useState(['2021', '03', '01']);
 
-            await fetch('https://admindev.inceptia.ai/api/v1/login/', {
-                method: 'POST',
-                body: datas
-            })
-                .then(response => {
-                    if (response.ok) {
-                        return response.text()
-                    } else {
-                        throw new Error("API Call ERROR");
-                    }
-                })
-                .then(texto => {
-                    const token = JSON.parse(texto)['token'];
-                    setData([token]);
-                    dataKey.push(token);
-                    console.log(token);
-                })
-
-                // Get: API Clients
-                .then(() => {
-                    getClients()
-                })
-
-                .catch(err => console.log(err));
-        }
-
-        async function getClients() {
-            await fetch('https://admindev.inceptia.ai/api/v1/clients/', {
-                headers: {
-                    Authorization: `JWT ${dataKey[0]}`
-                }
-            })
-                .then(response => response.json())
-                .then((texto) => {
-                    for (let i = 0; i < texto.length; i++) {
-                        const clientID = (texto)[i]['id'];
-                        const clientName = (texto)[i]['name'];
-                        setDataClient([{ "name": clientName, "id": clientID }]);
-                    }
-                })
-        }
-
-        fetchData();
-
-    }, [])
+    const [filterValidation,setFilterValidation] = useState('');
 
     return (
         <>
-            <ApiContext.Provider value={{ data, dataClient, results, setResults }}>
+            <ApiContext.Provider value={{ data, setData, dataClient, setDataClient, results, setResults, login, setLogin, validation, setValidation, fromDate, setFromDate, date, setDate,filterValidation,setFilterValidation }}>
                 {children}
             </ApiContext.Provider>
         </>

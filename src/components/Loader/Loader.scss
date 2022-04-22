@@ -2,7 +2,7 @@
 #loader{
     height: 105vh;
     width: 100vw;
-    background-image: linear-gradient(to right bottom, #00c8ff, #00baff, #00aaff, #0099ff, #0086ff);
+    background-image: linear-gradient(to right bottom, #00dcff, #00cdff, #00bdff, #00acff, #0099ff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,8 +12,8 @@
     transition: all 0.8s;
     z-index: 100;
     .loader__logo{
-        width: 50px;
+        width: 70px;
         opacity: 1;
-        filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.801));
+        filter: drop-shadow(1.2px 2px 0px rgba(255, 255, 255, 0.801));
     }
 }

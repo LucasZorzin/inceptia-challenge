@@ -1,0 +1,44 @@
+.no-reports-logo {
+    img {
+        width: 10vw;
+        position: absolute;
+        right: 2%;
+        top: 2%;
+    }
+}
+.no-reports-title {
+    position: absolute;
+    left: 16vw;
+    top: 3vh;
+    border-left-style: solid;
+    border-color: #0193ce;
+    border-left-width: 8px;
+    text-transform: uppercase;
+    h1 {
+        margin: 20px 0 20px 15px;
+        font-size: 5rem;
+        color: #0193ce;
+    }
+}
+.lucas {
+    position: absolute;
+    right: 2.5vw;
+    top: 95vh;
+    color: #007dd7;
+    font-size: 1rem;
+}
+.no-reports-cliente {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 25vw;
+    svg {
+        transform: translate(-10px, 0);
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+}

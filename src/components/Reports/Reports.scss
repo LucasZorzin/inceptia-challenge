@@ -1,6 +1,70 @@
 .table {
-    width: 82% !important;
-    // position: relative;
-    // right: 0;
-    // top: 0;
+    margin-top: 5%;
+    width: 70vw;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0px 2px 19px 5px rgba(58, 58, 58, 0.323);
+    tbody {
+        tr:hover {
+            background-color: rgba(92, 239, 255, 0.268);
+        }
+    }
+}
+.date {
+    right: 2%;
+    position: absolute;
+    top: 5%;
+    display: flex;
+    input {
+        font-size: 0.7rem;
+        padding: 0 5%;
+        background-color: rgba(255, 255, 255, 0.385);
+        border: 1px solid white;
+        padding: 2%;
+    }
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(to right bottom, #00dcff, #00cdff, #00bdff, #00acff, #0099ff);
+    z-index: -5;
+}
+.titulos-tabla {
+    color: #0021bc;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.gestionado,
+.dni {
+    color: #2873d5 !important;
+}
+.estado {
+    background-color: rgba(144, 239, 250, 0.192) !important;
+    text-align: center;
+}
+.section-line {
+    border-left-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-left-width: 6px;
+    position: absolute;
+    left: 16vw;
+    top: 2%;
+    h4 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 20px 0 20px 15px;
+        letter-spacing: 1px;
+    }
+}
+#date-filter {
+    transition: all 0.3s;
+}
+#date-filter:hover {
+    background-color: rgba(255, 255, 255, 0.652);
 }

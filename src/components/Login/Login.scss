@@ -1,0 +1,52 @@
+#login {
+    height: 105vh;
+    width: 100vw;
+    background-image: url("../../assets/img/login.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden !important;
+    transition: all 0.8s;
+    .login {
+        background-color: rgba(0, 0, 0, 0.515);
+        margin-top: 15%;
+        width: 80px;
+        height: 25px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #00baff;
+        border: 1px solid rgb(136, 136, 136);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .login:hover{
+        background-color: rgba(0, 0, 0, 0.36);
+    }
+}
+.logoLogin {
+    width: 50px;
+    filter: drop-shadow(1.2px 2px 0px rgba(255, 255, 255, 0.801));
+}
+.tbody-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.layer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.514);
+    z-index: -1;
+}
+.input-login{
+    margin-top: 1%;
+    background-color: rgba(0, 0, 0, 0.367);
+    border: 1px solid rgb(136, 136, 136);
+}
