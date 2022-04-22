@@ -13,7 +13,7 @@ const NoReports = () => {
                 <div className="no-reports-logo"><img src={logo} alt="" /></div>
             
             
-                <div className="no-reports-title"><h1>ReactDev Challenge</h1></div>
+                <div className="no-reports-title"><h1>React Dev Challenge</h1></div>
             
             <h4 className="lucas">BY LUCAS NAHUEL ZORZIN</h4>
             
